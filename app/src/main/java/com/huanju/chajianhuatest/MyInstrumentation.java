@@ -51,7 +51,7 @@ public class MyInstrumentation extends Instrumentation {
                 mResourcesField.setAccessible(true);
 
                 //创建我们自己的Resource
-                String apkPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/chajian_demo.apk";
+                String apkPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/chajian.apk";
                 String mPath = mContext.getApplicationContext().getPackageResourcePath();
 
                 AssetManager assetManager = AssetManager.class.newInstance();

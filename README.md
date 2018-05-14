@@ -191,7 +191,7 @@
 		String cachePath = MainActivity.this.getCacheDir().getAbsolutePath();
 		
 		//插件apk的路径
-		String apkPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/chajian_demo.apk";
+		String apkPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/chajian.apk";
 
  		//创建一个属于我们自己插件的ClassLoader，我们分析过只能使用DexClassLoader
 		DexClassLoader mClassLoader = new DexClassLoader(apkPath, cachePath,cachePath, getClassLoader());	

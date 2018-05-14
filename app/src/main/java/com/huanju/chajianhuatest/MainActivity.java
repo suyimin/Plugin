@@ -1,23 +1,15 @@
 package com.huanju.chajianhuatest;
 
-import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.Environment;
-import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.huanju.chajianhuatest.aidlmode.TestBean;
 import com.huanju.chajianhuatest.ams.AMSHookHelper;
 
 import java.io.File;
@@ -65,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 public void run() {
                     //创建一个属于我们自己插件的ClassLoader，我们分析过只能使用DexClassLoader
                     String cachePath = MainActivity.this.getCacheDir().getAbsolutePath();
-                    String apkPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/chajian_demo.apk";
+                    String apkPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/chajian.apk";
                     DexClassLoader mClassLoader = new DexClassLoader(apkPath, cachePath,cachePath, getClassLoader());
                     MyHookHelper.inject(mClassLoader);
                     try {
